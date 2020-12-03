@@ -13,9 +13,14 @@ inputs:
     description: 'Reporting level (cppcheck --include=<level>'
     required: false
     default: 'warning'
+  opts:
+    description: 'Any additional cppcheck flags or options'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.path }}
     - ${{ inputs.level }}
+    - ${{ inputs.opts }}

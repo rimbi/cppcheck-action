@@ -13,4 +13,5 @@ RUN apt-get -qq -y install curl clang-tidy cmake jq clang cppcheck clang-format
 
 ADD runchecks.sh /entrypoint.sh
 COPY . .
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT /entrypoint.sh

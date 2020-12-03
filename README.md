@@ -1,5 +1,5 @@
 Github action for linting the C code.
-Uses clang-tidy, clang-format, and cppcheck.
+Uses cppcheck.
 
 Example of usage:
 ```
@@ -12,7 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: c-linter
-        uses: tonybaloney/clang-tidy-action@master
-    env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: tonybaloney/cppcheck-action@master
 ```

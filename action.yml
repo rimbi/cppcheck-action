@@ -18,5 +18,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.path }}
-    - ${{ inputs.level }}
     - ${{ inputs.opts }}

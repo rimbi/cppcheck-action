@@ -9,14 +9,10 @@ inputs:
     description: 'Project Directory'
     required: false
     default: '.'
-  level:
-    description: 'Reporting level (cppcheck --include=<level>'
-    required: false
-    default: 'warning'
   opts:
     description: 'Any additional cppcheck flags or options'
     required: false
-    default: ''
+    default: '--enable=warning'
 runs:
   using: 'docker'
   image: 'Dockerfile'

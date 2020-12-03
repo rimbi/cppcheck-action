@@ -4,6 +4,13 @@ author: ArtificialAmateur
 branding:
   icon: alert-circle
   color: green
+inputs:
+  path:
+    description: 'Project Directory'
+    required: false
+    default: '.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}

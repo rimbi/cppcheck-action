@@ -2,15 +2,24 @@ Github action for linting the C code.
 Uses cppcheck.
 
 Example of usage:
-```
-name: c-linter
+
+```yaml
+name: linting
 
 on: [pull_request]
 jobs:
-  c-linter:
-    name: c-linter
+  linting:
+    name: cppcheck
     runs-on: ubuntu-latest
     steps:
       - name: c-linter
         uses: tonybaloney/cppcheck-action@master
+```
+
+Additional options:
+
+```
+ path: <relative path to the code to check> (default .)
+ level: <cppcheck level> (default 'warning')
+ opts: <additional command line flags and options) 
 ```

@@ -6,4 +6,4 @@ clang-tidy *.c *.h *.cpp *.hpp *.C *.cc *.CPP *.c++ *.cp *.cxx -checks=boost-*,b
 
 clang-format --style=llvm -i *.c *.h *.cpp *.hpp *.C *.cc *.CPP *.c++ *.cp *.cxx > clang-format-report.txt
 
-cppcheck --language=c++ --enable=warning --template="::{severity} file={file},line={line},col={column}::{message}" *
+cppcheck --language=c++ --enable=$2 --template="::{severity} file={file},line={line},col={column}::{message}" $1

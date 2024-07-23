@@ -38,7 +38,6 @@ RUN apt-get install -qqy --no-install-recommends \
     watch \
     make \
     openssl \
-    postgresql-server-dev-${PGVERSION} \
     psutils \
     tmux \
     watch \

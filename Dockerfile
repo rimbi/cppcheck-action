@@ -9,7 +9,7 @@ LABEL repository="https://github.com/tonybaloney/cppcheck-action"
 
 WORKDIR /build
 RUN apt-get update
-RUN apt install -qqy --no-install-recommends \
+RUN apt-get install -qqy --no-install-recommends \
     cppcheck \
     libncurses-dev \
     libxml2-dev \
